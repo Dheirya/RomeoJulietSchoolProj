@@ -481,6 +481,10 @@
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script>
+            var scrollEventHandler = function() {
+                window.scroll(0, window.pageYOffset);
+            };
+            window.addEventListener("scroll", scrollEventHandler, false);
             const splashScreen = document.getElementById("splash");
             splashScreen.addEventListener("animationend", splashEnd);
             animationsDone = 0;
