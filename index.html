@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset='UTF-8'>
+        <title>Romeo and Juliet Project</title>
+        <style>body {padding: 0;margin: 0;background-color: #191919;}.splash_logo:after,.splash_logo:before{display:block;left:15px;width:20px;height:1px;background-color:#757474;content:""}.splash{width:100vw;height:100vh;position:fixed;top:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;overflow:hidden}.splash_logo{font-family:"Open Sans",sans-serif;position:absolute;margin:-15px 0 0 -25px;top:50vh;z-index:5;left:50vw;width:50px;text-align:center;height:30px;font-size:26px;font-weight:600;color:#fff;opacity:1;will-change:opacity;-webkit-animation:.3s ease-in 1.5s forwards logo,.6s ease-in-out 3.2s forwards off;-moz-animation:.3s ease-in 1.5s forwards logo,.6s ease-in-out 3.2s forwards off;-o-animation:.3s ease-in 1.5s forwards logo,.6s ease-in-out 3.2s forwards off;animation:.3s ease-in 1.5s forwards logo,.6s ease-in-out 3.2s forwards off}.splash_logo:before{position:absolute;bottom:-5px}.splash_logo:after{position:absolute;top:-5px;will-change:width}.splash_svg{position:relative;margin:auto;top:0;left:0;width:100%;height:100%;bottom:0;right:0}.splash_minimize svg,.splash_svg svg{width:100%;height:100%;-webkit-backface-visibility:visible;backface-visibility:visible}.splash_svg svg rect{width:100%;height:100%;fill:#f0ebda;stroke:0;-webkit-clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh);clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh);-webkit-animation:.7s ease-in 2.7s forwards expand;-moz-animation:.7s ease-in 2.7s forwards expand;-o-animation:.7s ease-in 2.7s forwards expand;animation:.7s ease-in 2.7s forwards expand}.splash_minimize{position:absolute;margin:auto;width:100%;height:100%;top:0;left:0;z-index:4}.splash_minimize svg rect{width:100%;height:100%;-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);-webkit-animation:.2s ease-out 1s forwards scale,1.3s ease-out 1.2s forwards hide;-moz-animation:.2s ease-out 1s forwards scale,1.3s ease-out 1.2s forwards hide;-o-animation:.2s ease-out 1s forwards scale,1.3s ease-out 1.2s forwards hide;animation:.2s ease-out 1s forwards scale,1.3s ease-out 1.2s forwards hide}@-webkit-keyframes scale{100%{-webkit-clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh);clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh)}}@-moz-keyframes scale{100%{-webkit-clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh);clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh)}}@-o-keyframes scale{100%{-webkit-clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh);clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh)}}@keyframes scale{100%{-webkit-clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh);clip-path:polygon(45vw 40vh,55vw 40vh,55vw 60vh,45vw 60vh)}}@-webkit-keyframes hide{100%{fill:transparent}}@-moz-keyframes hide{100%{fill:transparent}}@-o-keyframes hide{100%{fill:transparent}}@keyframes hide{100%{fill:transparent}}@-webkit-keyframes off{100%{opacity:0}}@-moz-keyframes off{100%{opacity:0}}@-o-keyframes off{100%{opacity:0}}@keyframes off{100%{opacity:0}}@-webkit-keyframes on{100%{opacity:1}}@-moz-keyframes on{100%{opacity:1}}@-o-keyframes on{100%{opacity:1}}@keyframes on{100%{opacity:1}}@-webkit-keyframes logo{100%{color:#292929}}@-moz-keyframes logo{100%{color:#292929}}@-o-keyframes logo{100%{color:#292929}}@keyframes logo{100%{color:#292929}}@-webkit-keyframes type{0%{width:0}}@-moz-keyframes type{0%{width:0}}@-o-keyframes type{0%{width:0}}@keyframes type{0%{width:0}}@-webkit-keyframes type2{0%,50%{width:0}100%{width:100}}@-moz-keyframes type2{0%,50%{width:0}100%{width:100}}@-o-keyframes type2{0%,50%{width:0}100%{width:100}}@keyframes type2{0%,50%{width:0}100%{width:100}}@-webkit-keyframes expand{25%{-webkit-clip-path:polygon(0vw 0vh,55vw 40vh,55vw 58vh,45vw 58vh);clip-path:polygon(0vw 0vh,55vw 40vh,55vw 60vh,45vw 60vh);fill:white}50%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,45vw 60vh);clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,45vw 60vh);fill:#f0ebda}75%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,0vw 100vh);clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,0vw 100vh);fill:white}100%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);fill:#f0ebda}}@-moz-keyframes expand{25%{-webkit-clip-path:polygon(0vw 0vh,55vw 40vh,55vw 58vh,45vw 58vh);clip-path:polygon(0vw 0vh,55vw 40vh,55vw 60vh,45vw 60vh);fill:white}50%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,45vw 60vh);clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,45vw 60vh);fill:#f0ebda}75%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,0vw 100vh);clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,0vw 100vh);fill:white}100%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);fill:#f0ebda}}@-o-keyframes expand{25%{-webkit-clip-path:polygon(0vw 0vh,55vw 40vh,55vw 58vh,45vw 58vh);clip-path:polygon(0vw 0vh,55vw 40vh,55vw 60vh,45vw 60vh);fill:white}50%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,45vw 60vh);clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,45vw 60vh);fill:#f0ebda}75%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,0vw 100vh);clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,0vw 100vh);fill:white}100%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);fill:#f0ebda}}@keyframes expand{25%{-webkit-clip-path:polygon(0vw 0vh,55vw 40vh,55vw 58vh,45vw 58vh);clip-path:polygon(0vw 0vh,55vw 40vh,55vw 60vh,45vw 60vh);fill:white}50%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,45vw 60vh);clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,45vw 60vh);fill:#f0ebda}75%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,0vw 100vh);clip-path:polygon(0vw 0vh,100vw 0vh,55vw 60vh,0vw 100vh);fill:white}100%{-webkit-clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);clip-path:polygon(0vw 0vh,100vw 0vh,100vw 100vh,0vw 100vh);fill:#f0ebda}}</style>
+        <div id="splash" class="splash">
+            <div class="splash_logo">
+                RJ
+            </div>
+            <div class="splash_svg">
+                <svg width="100%" height="100%">
+                    <rect width="100%" height="100%" />
+                </svg>
+            </div>
+            <div class="splash_minimize">
+                <svg width="100%" height="100%">
+                    <rect width="100%" height="100%" />
+                </svg>
+            </div>
+        </div>
+        <link href='https://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet'/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.css"/>
+        <style>
+            body {
+                font-family: 'MedievalSharp';
+                margin: 0;
+                padding: 0;
+            }
+            .section p, .section h1, .section h2, .section ul {
+                max-width: 80%;
+            }
+            .section center {
+                display: none;
+            }
+            hr.fancy {
+                overflow: visible;
+                padding: 0;
+                border: none;
+                border-top: medium double #333;
+                color: #333;
+                text-align: center;
+                width: 80%;
+                margin-bottom: -25px;
+                margin-top: -5px;
+            }
+            hr.fancy:after {
+                content: "§";
+                display: inline-block;
+                position: relative;
+                top: -0.7em;
+                font-size: 1.5em;
+                padding: 0 0.25em;
+            }
+            .hr1:after {
+                background: #e4bc61 !important;
+            }
+            .hr2:after {
+                background: #eed48f !important;
+            }
+            .hr3:after {
+                background: #ec8c8c !important;
+            }
+            .hr4:after {
+                background: #73be73 !important;
+            }
+            .hr5:after {
+                background: #6a80a0 !important;
+            }
+            .hr6:after {
+                background: #c0b3c4 !important;
+            }
+            .fp-tooltip {
+                color: #333 !important;
+            }
+            .section center h2 {
+                font-family: cursive;
+                font-weight:1;
+                font-size:20px;
+                margin-top:-22.5px
+            }
+            .blockquote {
+                position: relative;
+                font-family: sans-serif;
+                font-weight: 800;
+                color: #ffffff;
+                padding: 20px;
+                width: 100%;
+                max-width: 77.5vw;
+                z-index: 1;
+                margin: 10px auto;
+                align-self: center;
+                border-top: solid 1px;
+                border-bottom: solid 1px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 10px;
+                margin-bottom: 22.5px;
+            }
+            .blockquote h1 {
+                position: relative;
+                color: rgba(35, 35, 35, 1);
+                font-size: 16px;
+                font-family: 'MedievalSharp';
+                font-weight: 500;
+                line-height: 18px;
+                margin: 0;
+                font-style: italic;
+            }
+            .blockquote:after {
+                position: absolute;
+                content: "”";
+                color: rgba(50, 50, 50, 1);
+                font-size: 10rem;
+                line-height: 0;
+                bottom: -33px;
+                right: 10px;
+            }
+            .fp-overflow {
+                height: 100%;
+            }
+            .paperOverlay {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              z-index: 999999999999;
+              background-repeat: repeat;
+              background-image: url("data:image/jpeg;base64,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");
+              mix-blend-mode: multiply;
+              pointer-events: none;
+            }
+            #fp-nav {
+                margin-right: -17.5px;
+            }
+            .section center, .fp-overflow {
+                position: relative !important;
+            }
+            .fp-overflow .corners img {
+                content: url("https://res.cloudinary.com/dzdr1i5qw/image/upload/v1676217751/image-removebg-preview_uvb9jf.png");
+                width: 8em;
+                position: absolute;
+            }
+            .fp-overflow .corners img:nth-child(1) {
+                top: -19px;
+                left: -5px;
+                transform: rotate(180deg);
+            }
+            .fp-overflow .corners img:nth-child(2) {
+                top: -22px;
+                right: -2.5px;
+                transform: rotate(-90deg);
+            }
+            .fp-overflow .corners img:nth-child(3) {
+                bottom: -30px;
+                left: -2.5px;
+                transform: rotate(90deg);
+            }
+            .fp-overflow .corners img:nth-child(4) {
+                bottom: -27px;
+                right: -6.5px;
+                transform: rotate(0deg);
+            }
+            .section center {
+                min-height: calc(100% - 8.5em) !important;
+            }
+            @media only screen and (min-width: 640px) {
+                .section center {
+                    min-height: calc(100% - 3.45em) !important;
+                }
+            }
+            @media only screen and (max-width: 640px) {
+                .section center {
+                    padding-bottom: 80px;
+                }
+                .title h1 {
+                    bottom: -100px !important;
+                }
+            }
+            @media only screen and (max-width: 650px) {
+                .title h1 {
+                    font-size: 2rem !important;
+                }
+            }
+            @media only screen and (max-width: 530px) {
+                .title h1 {
+                    bottom: -70px !important;
+                    font-size: 1.53rem !important;
+                }
+                .cover-img {
+                    margin-top: 10px !important;
+                }
+            }
+            .title-img {
+                margin-top: 15px;
+                margin-left: 10px;
+                width: 40%;
+                min-width: 315px !important;
+            }
+            .title h1 {
+                font-family: cursive;
+                font-weight: 1000;
+                font-size: 2.5rem;
+                color: #cc7c7b;
+                position: absolute;
+                bottom: -65px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            .cover-img {
+                display: none;
+                border-radius: 50%;
+                margin-top: 5px;
+                margin-bottom: -35px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="paperOverlay"></div>
+        <div style="display:none" id="pagepiling">
+            <div class="section title">
+                <center>
+                    <img class="title-img" src="https://res.cloudinary.com/dzdr1i5qw/image/upload/v1676222093/romeojuliet_wuc6og.png"/>
+                    <br/>
+                    <img class="cover-img" src="https://minio.la.utexas.edu/colaweb-prod/event_images/4/46239/romeo_and_juliet_performed_by_shakespeare_at_winedales_summer_class.jpg"/>
+                    <h1 id="dict"><center><i>Dictionary Project</i></center></h1>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Alliteration</h1>
+                    <h2><i>the repetition of usually initial consonant sounds in two or more neighboring words or syllables</i></h2>
+                    <hr class="fancy hr1"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Allusion</h1>
+                    <h2><i>an implied or indirect reference especially in literature</i></h2>
+                    <hr class="fancy hr2"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Apostrophe</h1>
+                    <h2><i>the addressing of a usually absent person or a usually personified thing rhetorically</i></h2>
+                    <hr class="fancy hr3"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Aside</h1>
+                    <h2><i>an utterance not meant to be heard by someone</i></h2>
+                    <hr class="fancy hr4"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Comic Relief</h1>
+                    <h2><i>a relief from the emotional tension especially of a drama that is provided by the interposition of a comic episode or element</i></h2>
+                    <hr class="fancy hr5"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Couplet</h1>
+                    <h2><i>two successive lines of verse forming a unit marked by rhythmic correspondence, rhyme, or the inclusion of a self-contained utterance</i></h2>
+                    <hr class="fancy hr6"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Dramatic Foil</h1>
+                    <h2><i>a character with qualities that contrasts another character's qualities</i></h2>
+                    <hr class="fancy hr1"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Foreshadowing</h1>
+                    <h2><i>an indication of what is to come</i></h2>
+                    <hr class="fancy hr2"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Metaphor</h1>
+                    <h2><i>a figure of speech in which a word or phrase denoting one kind of object or idea is used in place of another to suggest a likeness or analogy between them</i></h2>
+                    <hr class="fancy hr3"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Monologue</h1>
+                    <h2><i>a long speech done by a character in the presence of others</i></h2>
+                    <hr class="fancy hr4"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Personification</h1>
+                    <h2><i>representation of a thing or abstraction as a person or by the human form</i></h2>
+                    <hr class="fancy hr5"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Pun</h1>
+                    <h2><i>the humorous use of a word as to suggest two or more of its meanings or the meaning of another word similar in sound</i></h2>
+                    <hr class="fancy hr6"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Simile</h1>
+                    <h2><i>a figure of speech comparing two unlike things that is often introduced by like or as</i></h2>
+                    <hr class="fancy hr1"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Soliloquy</h1>
+                    <h2><i>a long speech done by a character in solidarity</i></h2>
+                    <hr class="fancy hr2"/>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                    <div class="blockquote">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue fermentum nunc, nec cursus tellus dictum quis. Morbi lectus sem, eleifend sit amet orci sed, congue laoreet purus. Duis id porta arcu, et gravida nibh. Pellentesque et tortor quis ante dictum fringilla. Duis posuere libero mi, vel porttitor lectus euismod.</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="section">
+                <center>
+                    <div class="corners"><img/><img/><img/><img/></div>
+                    <h1>Citations</h1>
+                    <h2><i>© 2023 <b>Dheirya Tyagi</b> Companies</i></h2>
+                    <hr class="fancy hr3"/>
+                    <ul>
+                        <li>Lorem Ipsum. Lorem Ipsum - All the facts - Lipsum generator. (n.d.). Retrieved February 12, 2023, from https://www.lipsum.com/ </li>
+                        <li>Lorem Ipsum. Lorem Ipsum - All the facts - Lipsum generator. (n.d.). Retrieved February 12, 2023, from https://www.lipsum.com/ </li>
+                        <li>Lorem Ipsum. Lorem Ipsum - All the facts - Lipsum generator. (n.d.). Retrieved February 12, 2023, from https://www.lipsum.com/ </li>
+                    </ul>
+                </center>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            const splashScreen = document.getElementById("splash");
+            splashScreen.addEventListener("animationend", splashEnd);
+            animationsDone = 0;
+            function splashEnd() {
+                animationsDone = animationsDone + 1;
+                if (animationsDone == 5) {
+                    document.getElementById("pagepiling").style.display = "block";
+                    $(".section center").fadeIn();
+                    resizeCover();
+                }
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.extensions.min.js"></script>
+        <script>
+            function resizeCover() {
+                var total = window.innerHeight;
+                var bottomed = $(".title-img").outerHeight(true);
+                var topped = $("#dict").outerHeight(true);
+                if (window.innerWidth <= 530) {
+                    $(".cover-img").height(total - (bottomed + topped));
+                } else if (window.innerWidth <= 640) {
+                    $(".cover-img").height(total - (bottomed + topped) + 110);
+                } else {
+                    $(".cover-img").height(total - (bottomed + topped) + 30);
+                }
+                $(".cover-img").fadeIn("slow");
+            }
+            $(window).resize(function() {
+                resizeCover();
+            });
+            $(document).ready(function () {
+                $('#pagepiling').fullpage({
+                    licenseKey: 'gplv3-license',
+                    dragAndMove: true,
+                    loopBottom: true,
+                    loopTop: true,
+                    navigation: true,
+                    scrollBar: false,
+                    css3: false,
+                    navigationPosition: 'right',
+                    navigationTooltips: ['Title', 'Alliteration', 'Allusion', 'Apostrophe', 'Aside', 'Comic Relief', 'Couplet', 'Dramatic Foil', 'Foreshadowing', 'Metaphor', 'Monologue', 'Personification', 'Pun', 'Simile', 'Soliloquy', 'Citations'],
+                    sectionsColor: ['#f0ebda', '#e4bc61', '#eed48f', '#ec8c8c', '#73be73', '#6a80a0', '#c0b3c4', '#e4bc61', '#eed48f', '#ec8c8c', '#73be73', '#6a80a0', '#c0b3c4', '#e4bc61', '#eed48f', '#ec8c8c'],
+                    credits: { enabled: false, label: 'Made by Dheirya Tyagi', position: 'right'},
+                });
+            });
+        </script>
+    </body>
+</html>
