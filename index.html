@@ -184,16 +184,23 @@
             }
             @media only screen and (max-width: 650px) {
                 .title h1 {
-                    font-size: 2rem !important;
+                    font-size: 2.2rem !important;
                 }
             }
             @media only screen and (max-width: 530px) {
                 .title h1 {
-                    bottom: -70px !important;
-                    font-size: 1.53rem !important;
+                    bottom: -115px !important;
                 }
                 .cover-img {
                     margin-top: 10px !important;
+                }
+                .title-img {
+                    width: 95% !important;
+                }
+            }
+            @media only screen and (max-width: 335px) {
+                .title h1 {
+                    font-size: 1.75rem !important;
                 }
             }
             .title-img {
@@ -211,6 +218,7 @@
                 bottom: -65px;
                 left: 50%;
                 transform: translate(-50%, 0);
+                width: 100%;
             }
             .cover-img {
                 display: none;
@@ -504,7 +512,7 @@
                 var bottomed = $(".title-img").outerHeight(true);
                 var topped = $("#dict").outerHeight(true);
                 if (window.innerWidth <= 530) {
-                    $(".cover-img").height(total - (bottomed + topped));
+                    $(".cover-img").height(total - (bottomed + topped) + 75);
                 } else if (window.innerWidth <= 640) {
                     $(".cover-img").height(total - (bottomed + topped) + 110);
                 } else {
